@@ -1,5 +1,0 @@
-name = "watch-complications"
-type = "module"
-
-[build]
-upload.format = "modules"

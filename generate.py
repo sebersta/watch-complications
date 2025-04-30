@@ -103,4 +103,16 @@ output = {
 with open("watch.json", "w") as f:
     json.dump(output, f, indent=2)
 
-print("watch.json")
+with open("watch.json") as f:
+    data = json.load(f)
+
+with open("worker.js", "w") as f:
+    f.write("export default {\n")
+    f.write("  async fetch(request) {\n")
+    f.write("    return new Response(JSON.stringify(")
+    f.write(json.dumps(data))
+    f.write("), {\n")
+    f.write("      headers: { 'Content-Type': 'application/json' }\n")
+    f.write("    });\n")
+    f.write("  }\n")
+    f.write("};\n")
