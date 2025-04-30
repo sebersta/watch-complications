@@ -100,7 +100,7 @@ output = {
 }
 
 # Write to file
-with open("library.html", "w") as f:
+with open("index.html", "w") as f:
     json.dump(output, f, indent=2)
 
 print("Data written to 1st_floor_ocean.json")
