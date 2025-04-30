@@ -1,0 +1,7 @@
+{
+  "name": "watch-complications",
+  "compatibility_date": "2025-04-30",
+  "assets": {
+    "directory": "./dist"
+  }
+}
